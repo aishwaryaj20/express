@@ -1,0 +1,22 @@
+db commands  mongodb
+
+1.insert 10 doc using insert n insert many
+db.users.insertMany([{"fname":"ash"},{"fname":"aj"}])
+
+2.update
+  db.users.updateMany({   "first_name" : "Tedie"}, {$set: {"age":"40"}});
+
+
+3.find
+db.users.find({}).pretty();
+db.users.findOne({"first_name": "Shana"});
+
+4.del
+db.users.remove({"first_name": "Tedie"},1)
+
+
+db.users.remove({"first_name":"Tedie"});
+
+5.del db
+
+>  db.dropDatabase()
